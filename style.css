@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&family=Roboto+Mono&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 1rem;
+
+
+  --primary-color: rgb(139, 211, 163);
+  --secondary-color: rgb(65, 68, 67);
+  --white: rgb(238, 235, 235);
+  --black: rgb(26, 26, 26);
+
+  --font1: 'Roboto Mono', monospace;
+  --font2: 'Mochiy Pop One', sans-serif;
+}
+
+body {
+  background: var(--black);
+  color: var(--white);
+  font-family: var(--font1);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  padding: 16px;
+}
+
+h1 {
+  font-weight: 900;
+  opacity: 0.8;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+.container > .box {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: var(--secondary-color);
+  border-radius: 5px;
+}
+
+.password-generated {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.2rem;
+  overflow: hidden;
+}
+
+.copy-btn {
+  border: none;
+  background: var(--primary-color);
+  color: var(--black);
+  padding: 10px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  font-weight: 900;
+  box-shadow: 1px 1px 1px #000000;
+  border: 1px solid #000000;
+  border-radius: 5px;
+}
+
+
+.copy-btn:active {
+  transform: scale(1.1);
+}
+
+#generatedPassword {
+  font-weight: bolder;
+  font-size: 1.5rem;
+  min-width: 80%;
+}
+
+.password-settings {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.input-row:first-child {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem
+
+}
+
+.char-length-value {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  font-weight: 900;
+}
+
+input[type=range] {
+  height: 50px;
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  background: var(--secondary-color);
+  transition: 0.1s;
+}
+
+input[type=range]:focus {
+  outline: none;
+}
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 15px;
+  cursor: pointer;
+  box-shadow: 1px 1px 1px #000000;
+  background: var(--primary-color);
+  border-radius: 5px;
+  border: 1px solid #000000;
+}
+input[type=range]::-webkit-slider-thumb {
+  box-shadow: 1px 1px 1px #000000;
+  border: 1px solid #000000;
+  height: 30px;
+  width: 30px;
+  border-radius: 50px;
+  background: var(--primary-color);
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -9px;
+}
+
+input[type="checkbox"]{
+  box-shadow: 1px 1px 1px #000000;
+  border: 1px solid var(--white);
+  background: var(--secondary-color);
+  appearance: none;
+  -webkit-appearance: none;
+  border-radius: 5px;
+  height: 20px;
+  width: 20px;
+  cursor: pointer;
+}
+
+input[type="checkbox"]:checked{
+  box-shadow: 1px 1px 1px #000000;
+  border: 1px solid #000000;
+  background: var(--primary-color);
+  border-radius: 5px;
+}
+
+input[type="checkbox"]:active {
+  transform: scale(1.1);
+}
+
+.generate-btn {
+  margin-top: 10px;
+  padding: 10px;
+  font-size: 1.5rem;
+  box-shadow: 1px 1px 1px #000000;
+  border: 1px solid #000000;
+  background: var(--primary-color);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border-radius: 10px;
+  color: var(--black);
+  cursor: pointer;
+  transition: 0.1s;
+}
+
+.generate-btn:hover {
+  background: var(--black);
+  color: var(--primary-color)
+}
+
+.generate-btn:active {
+  background: var(--primary-color);
+  color: var(--black)
+}

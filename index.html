@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Password Generator</title>
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <script src="./index.js" defer></script>
+</head>
+
+<body>
+  <div class="container">
+<!-------------------------- PASSWORD DISPLAY -------------------------->
+    <h1> Password Generator</h1>
+    <div class="box password-generated">
+      <div id="generatedPassword">PTx14PT</div>
+      <button class="copy-btn" title="Copy to Clipboard" id="copy-btn"><i class="fa-sharp fa-regular fa-copy"></i></button>
+    </div>
+
+    <!-------------------------- USER CHOICE -------------------------->
+  <form class="box password-settings">
+    <!------- CHARACTERS NUMBERS ------->
+    <div class="input-row">
+      <label for="charLength">Password length <span id="charLengthSpan" class="char-length-value">0</span></label>
+      <input type="range" name="charLengthInput" oninput="charLengthChange(this.value)" id="charLengthInput" value="8" min="8" max="20">
+    </div>
+    <!------- INCLUDE / EXCLUSE ------->
+
+    <div class="input-row">
+      <input type="checkbox" checked name="includeLower" id="includeLower">
+      <label for="includeLower">Include Lowercase Letters</label>
+    </div>
+    
+    <div class="input-row">
+      <input type="checkbox" checked name="includeUpper" id="includeUpper">
+      <label for="includeUpper">Include Uppercase Letters</label>
+    </div>
+    <div class="input-row">
+      <input type="checkbox" checked name="includeNumber" id="includeNumber">
+      <label for="includeNumber">Include Numbers</label>
+    </div>
+    <div class="input-row">
+      <input type="checkbox" checked name="includeSymbol" id="includeSymbol">
+      <label for="includeSymbol">Include Symbols</label>
+    </div>
+
+    <button type="button" class="generate-btn" id="generateBtn" onclick="getPassword()">Generate <i class="fa-solid fa-arrow-right"></i></button>
+  </form>
+
+  </div>
+</body>
+</html>
